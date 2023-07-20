@@ -1,3 +1,5 @@
+/// <reference types="nativewind/types" />
+
 type EmptyFunc = (...args: unknown[]) => void;
 
 export type Tron = {
