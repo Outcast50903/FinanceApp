@@ -11,6 +11,7 @@
     "pods": "cd ios && pod install && cd .."
   },
   "dependencies": {
+    "@react-navigation/native": "^6.1.7",
     "@tanstack/react-query": "^4.29.25",
     "jotai": "^2.2.2",
     "nativewind": "^2.0.11",
