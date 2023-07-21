@@ -9,7 +9,7 @@ type CustomContainerProps = {
 const CustomContainer: FC<CustomContainerProps> = ({children}) => {
   const isDarkMode = useColorScheme() === 'dark';
 
-  const backgroundStyle = 'bg-neutral-300 dark:bg-slate-900';
+  const backgroundStyle = 'bg-neutral-300 dark:bg-slate-900 flex-1 bg-red-400';
 
   return (
     <SafeAreaView className={backgroundStyle}>
@@ -17,7 +17,9 @@ const CustomContainer: FC<CustomContainerProps> = ({children}) => {
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         className={backgroundStyle}>
-        <View className="bg-neutral-300 dark:bg-slate-900">{children}</View>
+        <View className="bg-neutral-300 dark:bg-slate-900 flex-1 items-center justify-center">
+          {children}
+        </View>
       </ScrollView>
     </SafeAreaView>
   );
