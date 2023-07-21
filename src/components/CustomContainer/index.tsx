@@ -9,7 +9,7 @@ type CustomContainerProps = {
 const CustomContainer: FC<CustomContainerProps> = ({children}) => {
   const isDarkMode = useColorScheme() === 'dark';
 
-  const backgroundStyle = 'bg-neutral-300 dark:bg-slate-900 flex-1 bg-red-400';
+  const backgroundStyle = 'bg-neutral-300 dark:bg-slate-900 flex-1';
 
   return (
     <SafeAreaView className={backgroundStyle}>

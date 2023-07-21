@@ -6,7 +6,7 @@ import {createDrawerNavigator} from '@react-navigation/drawer';
 import drawerTheme from './hooks/drawerTheme';
 
 const {Navigator, Screen} = createDrawerNavigator();
-// const {Navigator, Screen} = createNativeStackNavigator();
+
 const AppNavigation = () => {
   const isDarkMode = useColorScheme() === 'dark';
 
@@ -17,7 +17,6 @@ const AppNavigation = () => {
           initialRouteName="Home"
           screenOptions={drawerTheme(isDarkMode)}>
           <Screen name="Home" component={HomeScreen} />
-          <Screen name="Detail" component={HomeScreen} />
         </Navigator>
       </NavigationContainer>
     </View>
