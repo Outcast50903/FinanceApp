@@ -1,8 +1,8 @@
 import {DrawerNavigationOptions} from '@react-navigation/drawer';
 
 const drawerTheme = (isDarkMode: boolean): DrawerNavigationOptions => {
-  const themeColor = isDarkMode ? 'rgb(39 55 70)' : 'rgb(245 245 245)';
-  const textColor = isDarkMode ? 'rgb(245 245 245)' : 'rgb(39 55 70)';
+  const themeColor = isDarkMode ? 'rgb(23 23 23)' : 'rgb(245 245 245)';
+  const textColor = isDarkMode ? 'rgb(245 245 245)' : 'rgb(23 23 23)';
 
   return {
     headerStyle: {

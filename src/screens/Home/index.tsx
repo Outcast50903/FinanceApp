@@ -14,7 +14,9 @@ const HomeScreen = () => {
   return (
     <Container>
       <View className="text-justify flex-1">
-        <Text className="text-2xl text-center mb-2">React-Native Template</Text>
+        <Text className="text-2xl text-center mb-2 dark:text-white">
+          React-Native Template
+        </Text>
         <Card>
           <Text className="text-lg">
             This is a template for React-Native projects using TypeScript,
