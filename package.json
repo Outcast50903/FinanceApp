@@ -8,7 +8,8 @@
     "lint": "eslint .",
     "start": "react-native start",
     "test": "jest",
-    "pods": "cd ios && pod install && cd .."
+    "pods": "cd ios && pod install && cd ..",
+    "reset": "find . -type dir -name node_modules -prune -print -exec rm -rf '{}' +"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.19.1",
@@ -16,6 +17,7 @@
     "@react-navigation/drawer": "^6.6.3",
     "@react-navigation/native": "^6.1.7",
     "@react-navigation/native-stack": "^6.9.13",
+    "@react-navigation/stack": "^6.3.17",
     "@tanstack/react-query": "^4.29.25",
     "axios": "^1.4.0",
     "jotai": "^2.2.2",
