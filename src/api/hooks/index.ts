@@ -1,1 +1,1 @@
-export {default as Fact} from './Fact';
+export {default as useQueryHistory} from './getHistory';
