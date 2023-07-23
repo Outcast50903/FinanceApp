@@ -1,27 +1,23 @@
 import Reactotron from 'reactotron-react-native';
-// import {
-//   QueryClientManager,
-//   reactotronReactQuery,
-// } from 'reactotron-react-query'
+// import {QueryClientManager} from 'reactotron-react-query';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import {Tron} from '../../global';
-
-// import { queryClient } from './queryClient'
+// import {queryClient} from '../api';
 
 // const queryClientManager = new QueryClientManager({
 //   queryClient,
-// })
+// });
 
 // Reactotron.setAsyncStorageHandler?.(AsyncStorage)
 //   .configure({
 //     host: '192.168.0.6',
 //     onDisconnect: () => {
-//       queryClientManager.unsubscribe()
+//       queryClientManager.unsubscribe();
 //     },
 //   })
 //   .useReactNative()
-//   .connect()
+//   .connect();
 
 Reactotron.setAsyncStorageHandler!(AsyncStorage)
   // AsyncStorage would either come from `react-native` or
