@@ -7,7 +7,7 @@ interface CardProps {
 
 const Card: FC<CardProps> = ({children}) => {
   return (
-    <View className="bg-white rounded-xl w-full max-w-xs p-6 space-y-2">
+    <View className="flex-1 bg-white rounded-xl w-full max-w-xs p-6 space-y-2">
       {children}
     </View>
   );

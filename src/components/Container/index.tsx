@@ -12,7 +12,7 @@ const Container: FC<ContainerProps> = ({children}) => {
   return (
     <SafeAreaView className="flex-1 bg-neutral-100 dark:bg-neutral-900">
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <View className="flex-1 bg-neutral-100 w-full h-full justify-center items-center px-2 dark:bg-neutral-900">
+      <View className="flex-1 bg-neutral-100 w-full h-full justify-center items-center px-2 text-black dark:text-white dark:bg-neutral-900">
         {children}
       </View>
     </SafeAreaView>
