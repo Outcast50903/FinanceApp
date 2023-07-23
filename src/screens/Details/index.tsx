@@ -8,10 +8,10 @@ const DetailsScreen = () => {
   return (
     <Container>
       <Card>
-        <Text className="text-2xl">Dependencies</Text>
-        <Text className="text-justify text-base">
-          The most important dependencies with which this project was built with
-          are:
+        <Text className="text-2xl dark:text-black">Dependencias</Text>
+        <Text className="text-justify text-base dark:text-black">
+          Las dependencias más importantes con las que se construyó este
+          proyecto con son:
         </Text>
         <FlatList data={data} renderItem={({item}) => <Items item={item} />} />
       </Card>
