@@ -13,9 +13,9 @@ import {
 } from '@tanstack/react-query';
 import {AppStateStatus, Platform} from 'react-native';
 
-import AppNavigation from './src/navigation';
 import {useOnlineManager} from './src/hooks';
 import useAppState from './src/hooks/useStateApp';
+import {AppNavigation} from './src/navigation';
 
 const client = new QueryClient();
 
