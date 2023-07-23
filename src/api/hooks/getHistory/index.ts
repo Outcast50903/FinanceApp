@@ -12,7 +12,6 @@ const API = new AxiosHttpClient(process.env.API_URL ?? '');
 
 const useQueryHistory = () => {
   const indicatorSelected: string | null = useAtomValue(indicatorSelectedAtom);
-  const day = dayjs().subtract(30, 'day').date();
   const lastMonth = dayjs().subtract(30, 'day').month() + 1;
   const month = dayjs().month() + 1;
   const year = dayjs().subtract(30, 'day').year();
@@ -35,11 +34,9 @@ const useQueryHistory = () => {
           return data;
         }
 
-        const valuesSorted = values.sort(
+        values.sort(
           (a, b) => (b.Fecha > a.Fecha && 1) || (b.Fecha < a.Fecha && -1) || 0,
         );
-
-        queryClient.setQueryData(['history'], valuesSorted);
 
         return data;
       },
