@@ -1,6 +1,6 @@
 import {DrawerNavigationOptions} from '@react-navigation/drawer';
 
-const drawerTheme = (isDarkMode: boolean): DrawerNavigationOptions => {
+const useDrawerTheme = (isDarkMode: boolean): DrawerNavigationOptions => {
   const themeColor = isDarkMode ? 'rgb(23 23 23)' : 'rgb(245 245 245)';
   const textColor = isDarkMode ? 'rgb(245 245 245)' : 'rgb(23 23 23)';
 
@@ -19,4 +19,4 @@ const drawerTheme = (isDarkMode: boolean): DrawerNavigationOptions => {
   };
 };
 
-export default drawerTheme;
+export default useDrawerTheme;
