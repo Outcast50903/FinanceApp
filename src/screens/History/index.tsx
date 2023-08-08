@@ -1,11 +1,11 @@
 import React from 'react';
-import {Container, List} from '../../components';
-import {HistoryItem} from './components';
-import {useQueryHistory} from '../../api';
 import {Text, View} from 'react-native';
-import {useGetKey} from '../../hooks';
 import {useAtomValue} from 'jotai';
-import {titleSelectedAtom} from '../../atoms';
+import {useGetKey} from 'hooks';
+import {titleSelectedAtom} from 'atoms';
+import {Container, List} from 'components';
+import {HistoryItem} from './components';
+import {useQueryHistory} from 'api';
 
 const HistoryScreen = () => {
   const Key: string = useGetKey();

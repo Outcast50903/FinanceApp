@@ -1,5 +1,5 @@
+import {indicatorSelectedAtom} from 'atoms';
 import {useAtomValue} from 'jotai';
-import {indicatorSelectedAtom} from '../../atoms';
 
 const useGetKey = () => {
   const indicatorSelected = useAtomValue(indicatorSelectedAtom);

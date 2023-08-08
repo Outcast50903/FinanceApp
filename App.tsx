@@ -12,10 +12,8 @@ import {
   focusManager,
 } from '@tanstack/react-query';
 import {AppStateStatus, Platform} from 'react-native';
-
-import {useOnlineManager} from './src/hooks';
-import useAppState from './src/hooks/useStateApp';
-import {AppNavigation} from './src/navigation';
+import {useOnlineManager, useStateApp} from 'hooks';
+import {AppNavigation} from 'navigation';
 
 const client = new QueryClient();
 
@@ -24,7 +22,7 @@ const App = (): JSX.Element => {
     Platform.OS !== 'web' && focusManager.setFocused(status === 'active');
 
   useOnlineManager();
-  useAppState(onAppStateChange);
+  useStateApp(onAppStateChange);
 
   return (
     <QueryClientProvider client={client}>

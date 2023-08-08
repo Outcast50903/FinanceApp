@@ -1,6 +1,6 @@
 import React from 'react';
+import {Card, Container} from 'components';
 import {FlatList, Text} from 'react-native';
-import {Card, Container} from '../../components';
 import {Items} from './components';
 import data from './data';
 

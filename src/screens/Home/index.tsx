@@ -1,9 +1,9 @@
 import React from 'react';
 
-import {Container, List} from '../../components';
+import Geolocation from '@react-native-community/geolocation';
+import {Container, List} from 'components';
 import IndicatorsArray from './indicatorsArray';
 import {IndicatorItem} from './Components';
-import Geolocation from '@react-native-community/geolocation';
 
 const HomeScreen = () => {
   Geolocation.getCurrentPosition(info => console.tron.log(info));

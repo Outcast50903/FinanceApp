@@ -1,12 +1,11 @@
 import {useQuery} from '@tanstack/react-query';
-import AxiosHttpClient from '../../../utils/api';
-import {IndicatorListResponse} from '../../types';
+import {queryClient} from 'api/queryClient';
+import {IndicatorListResponse} from 'api/types';
+import {indicatorSelectedAtom} from 'atoms';
 import dayjs from 'dayjs';
-import {IsEmptyValue} from '../../../utils/validations';
-import {indicatorSelectedAtom} from '../../../atoms';
 import {useAtomValue} from 'jotai';
-import isEmptyValue from '../../../utils/validations/IsEmptyValue';
-import {queryClient} from '../../queryClient';
+import AxiosHttpClient from 'utils/api';
+import {IsEmptyValue} from 'utils/validations';
 
 const API = new AxiosHttpClient(process.env.API_URL ?? '');
 
@@ -25,8 +24,8 @@ const useQueryHistory = () => {
     {
       enabled:
         !IsEmptyValue(indicatorSelected) &&
-        !isEmptyValue(year) &&
-        !isEmptyValue(lastMonth),
+        !IsEmptyValue(year) &&
+        !IsEmptyValue(lastMonth),
       onSuccess(data) {
         const values = Object.values(data)[0];
 

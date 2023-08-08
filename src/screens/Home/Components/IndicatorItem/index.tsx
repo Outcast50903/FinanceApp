@@ -1,20 +1,21 @@
 import {View, Text, Pressable} from 'react-native';
 import React, {FC} from 'react';
 import {useNavigation} from '@react-navigation/native';
-import {StackNavigationProp} from '@react-navigation/stack';
-import {RightArrow} from '../../../../components';
-import {IndicatorStackType} from '../../../../navigation';
 import {useSetAtom} from 'jotai';
-import {
-  handleIndicatorSelectedAtom,
-  handleTitleSelectedAtom,
-} from '../../../../atoms';
+import {BottomTabNavigationProp} from '@react-navigation/bottom-tabs';
+import {BottomTabStackParamList} from 'navigation';
+import {handleIndicatorSelectedAtom, handleTitleSelectedAtom} from 'atoms';
+import {RightArrow} from 'components';
 
 interface IndicatorItemProps {
   item: {name: string; value: string};
 }
+
+type IndicatorStackNavigationProp =
+  BottomTabNavigationProp<BottomTabStackParamList>;
+
 const IndicatorItem: FC<IndicatorItemProps> = ({item: {name, value}}) => {
-  const navigation = useNavigation<StackNavigationProp<IndicatorStackType>>();
+  const navigation = useNavigation<IndicatorStackNavigationProp>();
   const handleIndicatorSelected = useSetAtom(handleIndicatorSelectedAtom);
   const handleTitleSelected = useSetAtom(handleTitleSelectedAtom);
 
@@ -24,7 +25,7 @@ const IndicatorItem: FC<IndicatorItemProps> = ({item: {name, value}}) => {
         onPress={() => {
           handleIndicatorSelected(value);
           handleTitleSelected(name);
-          navigation.navigate('History');
+          navigation.navigate('HOME_ROUTES', {screen: 'HISTORY'});
         }}
         className="w-64">
         <Text className="text-base font-bold dark:text-white">{name}</Text>
@@ -36,7 +37,7 @@ const IndicatorItem: FC<IndicatorItemProps> = ({item: {name, value}}) => {
         onPress={() => {
           handleIndicatorSelected(value);
           handleTitleSelected(name);
-          navigation.navigate('InfoIndicator');
+          navigation.navigate('HOME_ROUTES', {screen: 'INFO'});
         }}
         className="items-center justify-center w-10">
         <RightArrow color="#AD1818" width={20} height={20} />
