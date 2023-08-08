@@ -16,7 +16,6 @@ const BottomNavigation = () => {
           name={stack}
           component={component}
           options={{
-            // eslint-disable-next-line react/no-unstable-nested-components
             tabBarButton: props => (
               <BottomTabItem {...props} label={label} icon={icon} />
             ),

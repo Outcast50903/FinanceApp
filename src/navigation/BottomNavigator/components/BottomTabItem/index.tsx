@@ -17,7 +17,6 @@ const BottomTabItem: FC<DrawerItemProps> = ({
   const isDarkMode = useColorScheme() === 'dark';
   const focused = accessibilityState?.selected;
 
-  // eslint-disable-next-line react/no-unstable-nested-components
   const CurrentIcon = () => (
     <Icon
       width={30}

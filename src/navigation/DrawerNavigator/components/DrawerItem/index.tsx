@@ -11,7 +11,6 @@ interface DrawerItemProps {
 const DrawerItem: FC<DrawerItemProps> = ({icon: Icon, label, onPress}) => {
   const isDarkMode = useColorScheme() === 'dark';
 
-  // eslint-disable-next-line react/no-unstable-nested-components
   const CurrentIcon = () => (
     <Icon
       width={30}
@@ -19,6 +18,7 @@ const DrawerItem: FC<DrawerItemProps> = ({icon: Icon, label, onPress}) => {
       color={isDarkMode ? 'rgb(245 245 245)' : 'rgb(23 23 23)'}
     />
   );
+  
   return (
     <Pressable onPress={onPress}>
       <View className="flex-row space-x-4 flex-1 w-full h-full items-center">

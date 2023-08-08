@@ -20,7 +20,8 @@ const IndicatorItem: FC<IndicatorItemProps> = ({item: {name, value}}) => {
   const handleTitleSelected = useSetAtom(handleTitleSelectedAtom);
 
   return (
-    <View className="w-full flex-2 justify-between flex-row p-4 my-1 rounded-xl border-transparent  bg-white border dark:bg-gray-700 dark:text-white">
+    <View className="w-full flex-2 justify-between flex-row p-4 my-1 rounded-xl border-transparent  bg-white border 
+      dark:bg-gray-700 dark:text-white">
       <Pressable
         onPress={() => {
           handleIndicatorSelected(value);

@@ -17,7 +17,7 @@ import {AppNavigation} from 'navigation';
 
 const client = new QueryClient();
 
-const App = (): JSX.Element => {
+const App = () => {
   const onAppStateChange = (status: AppStateStatus) =>
     Platform.OS !== 'web' && focusManager.setFocused(status === 'active');
 

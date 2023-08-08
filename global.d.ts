@@ -1,5 +1,6 @@
 /// <reference types="nativewind/types" />
 
+// eslint-disable-next-line no-unused-vars
 type EmptyFunc = (...args: unknown[]) => void;
 
 export type Tron = {
