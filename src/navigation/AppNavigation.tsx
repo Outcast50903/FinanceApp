@@ -1,25 +1,20 @@
-import React from 'react';
-import {useColorScheme} from 'react-native';
+import React, {FC} from 'react';
 import {NavigationContainer} from '@react-navigation/native';
-import {createDrawerNavigator} from '@react-navigation/drawer';
-import DetailsScreen from '../screens/Details';
-import IndicatorStack from './IndicatorStack';
-import {useDrawerTheme} from './hooks';
+import {StatusBar, useColorScheme} from 'react-native';
+import {SafeAreaView} from 'react-native-safe-area-context';
+import {DrawerContentComponentProps} from '@react-navigation/drawer';
+import DrawerNavigator from './DrawerNavigator';
 
-const {Navigator, Screen} = createDrawerNavigator();
-
-const AppNavigation = () => {
+const AppNavigation: FC<DrawerContentComponentProps> = () => {
   const isDarkMode = useColorScheme() === 'dark';
 
   return (
-    <NavigationContainer>
-      <Navigator
-        initialRouteName="Home"
-        screenOptions={useDrawerTheme(isDarkMode)}>
-        <Screen name="Home" component={IndicatorStack} />
-        <Screen name="Details" component={DetailsScreen} />
-      </Navigator>
-    </NavigationContainer>
+    <SafeAreaView className="flex-1 bg-neutral-100 dark:bg-neutral-900">
+      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
+      <NavigationContainer>
+        <DrawerNavigator />
+      </NavigationContainer>
+    </SafeAreaView>
   );
 };
 

@@ -1,10 +1,16 @@
-export type HomeStackType = {
-  Home: undefined;
-  Details: undefined;
+import {NavigatorScreenParams} from '@react-navigation/native';
+
+export type HomeStackParamList = {
+  HOME: undefined;
+  HISTORY: undefined;
+  INFO: undefined;
 };
 
-export type IndicatorStackType = {
-  Volver: undefined;
-  History: undefined;
-  InfoIndicator: undefined;
+export type BottomTabStackParamList = {
+  HOME_ROUTES: NavigatorScreenParams<HomeStackParamList>;
+  DETAILS: undefined;
+};
+
+export type DrawerStackParamList = {
+  BOTTOM_TABS_ROUTES: NavigatorScreenParams<BottomTabStackParamList>;
 };
