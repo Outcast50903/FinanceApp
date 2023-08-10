@@ -26,7 +26,7 @@ const BottomTabItem: FC<DrawerItemProps> = ({
   );
 
   return (
-    <Pressable onPress={onPress} className="flex-1">
+    <Pressable testID={`bottom-tab-${label.toLocaleLowerCase()}`} onPress={onPress} className="flex-1">
       <View className="flex-col space-x-4 flex-1 w-full h-full items-center top-2 bottom-2 active:bg-slate-400">
         <View
           className={`flex-1 justify-center items-center p-4 ${

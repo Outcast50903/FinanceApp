@@ -15,8 +15,8 @@
     "lint:fix": "yarn lint --fix",
     "lint:tsc": "tsc --noEmit",
     "test": "jest",
-    "build:e2e": "detox build --configuration ios.sim.debug",
-    "test:e2e": "detox test --configuration ios.sim.debug",
+    "build:e2e": "npx detox build --configuration ios.sim.debug",
+    "test:e2e": "npx detox test --configuration ios.sim.debug",
     "test:e2e:watch": "yarn test:e2e --watch",
     "test:watch": "yarn test --watch"
   },
