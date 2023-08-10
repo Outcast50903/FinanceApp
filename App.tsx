@@ -14,10 +14,11 @@ import {
 import {AppStateStatus, Platform} from 'react-native';
 import {useOnlineManager, useStateApp} from 'hooks';
 import {AppNavigation} from 'navigation';
+import { DrawerContentComponentProps } from '@react-navigation/drawer';
 
 const client = new QueryClient();
 
-const App = () => {
+const App = ({ state, navigation, descriptors }: DrawerContentComponentProps) => {
   const onAppStateChange = (status: AppStateStatus) =>
     Platform.OS !== 'web' && focusManager.setFocused(status === 'active');
 
@@ -26,7 +27,7 @@ const App = () => {
 
   return (
     <QueryClientProvider client={client}>
-      <AppNavigation />
+      <AppNavigation state={state} navigation={navigation} descriptors={descriptors}  />
     </QueryClientProvider>
   );
 };

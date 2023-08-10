@@ -5,7 +5,7 @@ import Container from 'components/Container';
 const Loading = () => {
   return (
     <Container>
-      <View className="flex-1 items-center justify-evenly">
+      <View testID='view-component' className="flex-1 items-center justify-evenly">
         <Text className="text-black dark:text-white text-lg">
           Cargando la información
         </Text>

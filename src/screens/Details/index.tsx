@@ -13,7 +13,7 @@ const DetailsScreen = () => {
           Las dependencias más importantes con las que se construyó este
           proyecto con son:
         </Text>
-        <FlatList data={data} renderItem={({item}) => <Items item={item} />} />
+        <FlatList testID='details-list-id' data={data} renderItem={({item}) => <Items item={item} />} />
       </Card>
     </Container>
   );

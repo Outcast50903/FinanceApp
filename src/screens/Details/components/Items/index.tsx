@@ -7,7 +7,7 @@ interface ItemProps {
 
 const Item: FC<ItemProps> = ({item: {key}}) => {
   return (
-    <View className="mb-2">
+    <View testID='details-item-component-id' className="mb-2">
       <Text className="text-lg dark:text-black">{`\u2022 ${key}`}</Text>
     </View>
   );
