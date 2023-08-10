@@ -67,4 +67,49 @@ yarn ios
 
 ```
 
+<!-- prettier-ignore-end -->
+
+# Tests
+
+## Jest
+
+Run the unit tests:
+
+```sh
+yarn test
+```
+
+Run the unit tests in watch mode:
+
+```sh
+yarn test:watch
+```
+
+## E2E Tests
+
+[Install macOS prerequisites](https://wix.github.io/Detox/docs/introduction/getting-started/#2-macos-only-applesimutils):
+
+```sh
+brew tap wix/brew
+brew install applesimutils
+```
+
+[Build the app](https://wix.github.io/Detox/docs/introduction/project-setup#step-5-build-the-app):
+
+```sh
+yarn build:e2e
+```
+
+[Run the E2E tests](https://wix.github.io/Detox/docs/introduction/your-first-test#running-tests):
+
+```sh
+yarn test:e2e
+```
+
+Run the E2E tests in watch mode:
+
+```sh
+yarn test:e2e:watch
+```
+
 ## Congratulations! :tada:
